@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+  function check(){
+    var v1=f.accno.value;
+    var v2=f.name.value;
+    var v3=f.psw.value;
+    var v4=f.cpsw.value;
+    var v5=f.amount.value;
+    var v6=f.addr.value;
+    var v7=f.no.value;
+    if(v1=="")
+    {
+      alert("please enter account number:");
+      document.f.accno.focus();
+      return false;
+    }
+    if((v1.length<0)||(v1.length<11))
+    {
+      alert("Account number is invalid")
+      document.f.accno.focus();
+      return false;
+    }
+    if(v2=="")
+    {
+      alert("please fill your name");
+      document.f.name.focus();
+      return false;
+    }
+    if(v3=="")
+    {
+      alert("please enter your passwprd");
+      document.f.psw.focus();
+      return false;
+    }
+    if(v4=="")
+    {
+      alert("please enter your confirm_passsword:");
+      document.f.cpsw.focus();
+      return false;
+    }
+    if(v5=="")
+    {
+      alert("please enter the amount:");
+      document.f.amount.focus();
+      return false;
+    }
+    if(v6=="")
+    {
+      alert("address is mandatory:");
+      document.f.addr.focus();
+      return false;
+    }
+    if(v7=="")
+    {
+      alert("please enter your mobile number:");
+      document.f.accno.focus();
+      return false;
+    }
+    
+    
+    
+    
+    
+  }
+</script>
+  
+</head>
+<body style="background-color:skyblue">
+  <center>
+  <h1 Style="color:darkgreen">SDFC BANK</h1><P></P>
+  <h2>EXTRAORDINARY SERVICRES</h2><P></P>
+  <h3 style=background-color:lightgreen;padding:20px;margin:40px;color:black><a href="bankhome.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href ="newaccount.html">New Account</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="balance.html">Balance</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="deposit.html">Deposit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="withdraw.html">Withdraw</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="transfer.html">Transfer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="closeacc.html">CloseA/c</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="about.html">AboutUs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </h3>
+  <h1 style="color:brown">OPEN ACCOUNT FORM</h1>
+  
+  <form name="f" action="NewAccount" method="post" onsubmit="return check()">
+    <table>
+      <tr>
+    <td>Account_number:</td>
+    <td><input type="text" name="accno"></td>
+    </tr>
+    <tr>
+    <td>Name:</td>
+    <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+    <td>Password:</td>
+    <td><input type="password" name="psw"></td>
+    </tr>
+    <tr>
+    <td>confirm_password:</td>
+    <td><input type="password" name="cpsw"></td>
+    </tr>
+    <tr>
+    <td>Amount:</td>
+    <td><input type="text" name="amount"></td>
+    </tr>
+    <tr>
+    <td>Address:</td>
+    <td><input type="text" name="addr"></td>
+    </tr>
+    <tr>
+    <td>Mobile_no:</td>
+    <td><input type="text" name="no"></td>
+    </tr>
+    <tr>
+    <td><input type="submit" value="submit"></td>
+      <td><input type="reset" value="clear"></td>
+    </tr>
+    
+        
+        
+  </table>
+    
+  </form>
+  </center>
+
+
+</body>
+</html>    
